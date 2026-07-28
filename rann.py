@@ -124,9 +124,12 @@ def main():
     # Imagem final
     final_result = np.vstack((row1, row2))
 
-    # Salvar a imagem final
+    # Salvar a imagem final e as saídas individuais
     cv2.imwrite('resultado.jpg', final_result)
-    print("Processamento concluído. Imagem salva como 'resultado.jpg'.")
+    cv2.imwrite('reconstruido.jpg', img_reconstructed)
+    cv2.imwrite('residuo_absoluto.jpg', error_map)
+    cv2.imwrite('mapa_complexidade.jpg', overlay)
+    print("Processamento concluído. Imagens salvas.")
 
 if __name__ == "__main__":
     main()
