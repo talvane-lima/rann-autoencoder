@@ -127,9 +127,9 @@ def main():
     # Criar imagem com grid dos patches
     img_patches = img.copy()
     for y in range(0, h, patch_size):
-        cv2.line(img_patches, (0, y), (w, y), (0, 255, 0), 1)
+        cv2.line(img_patches, (0, y), (w, y), (255, 255, 255), 1)
     for x in range(0, w, patch_size):
-        cv2.line(img_patches, (x, 0), (x, h), (0, 255, 0), 1)
+        cv2.line(img_patches, (x, 0), (x, h), (255, 255, 255), 1)
 
     # Salvar a imagem final e as saídas individuais
     cv2.imwrite('resultado.jpg', final_result)
