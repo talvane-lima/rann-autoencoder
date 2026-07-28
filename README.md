@@ -48,6 +48,11 @@ O algoritmo gerará, ao término do processamento, o arquivo rasterizado `result
 3. **Resíduo Absoluto**
 4. **Mapa de Complexidade Estrutural**
 
+Além disso, o script salvará as seguintes imagens de forma individual:
+- `reconstruido.jpg`: O sinal reconstruído isolado.
+- `residuo_absoluto.jpg`: O mapa de resíduo absoluto isolado.
+- `mapa_complexidade.jpg`: O mapa de complexidade estrutural isolado.
+
 ## 4. Referências Bibliográficas
 
 Os fundamentos matemáticos referentes ao treinamento de redes neurais com conexões e pesos ocultos pseudo-aleatórios derivam da literatura seminal consolidada nas seguintes publicações:
