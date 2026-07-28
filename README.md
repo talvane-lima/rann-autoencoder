@@ -52,6 +52,7 @@ Além disso, o script salvará as seguintes imagens de forma individual:
 - `reconstruido.jpg`: O sinal reconstruído isolado.
 - `residuo_absoluto.jpg`: O mapa de resíduo absoluto isolado.
 - `mapa_complexidade.jpg`: O mapa de complexidade estrutural isolado.
+- `imagem_patches.jpg`: A imagem original com um grid visual demonstrando a divisão em patches.
 
 ## 4. Referências Bibliográficas
 

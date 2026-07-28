@@ -124,11 +124,19 @@ def main():
     # Imagem final
     final_result = np.vstack((row1, row2))
 
+    # Criar imagem com grid dos patches
+    img_patches = img.copy()
+    for y in range(0, h, patch_size):
+        cv2.line(img_patches, (0, y), (w, y), (0, 255, 0), 1)
+    for x in range(0, w, patch_size):
+        cv2.line(img_patches, (x, 0), (x, h), (0, 255, 0), 1)
+
     # Salvar a imagem final e as saídas individuais
     cv2.imwrite('resultado.jpg', final_result)
     cv2.imwrite('reconstruido.jpg', img_reconstructed)
     cv2.imwrite('residuo_absoluto.jpg', error_map)
     cv2.imwrite('mapa_complexidade.jpg', overlay)
+    cv2.imwrite('imagem_patches.jpg', img_patches)
     print("Processamento concluído. Imagens salvas.")
 
 if __name__ == "__main__":
